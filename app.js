@@ -1,6 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-
+require('dotenv').config();
+const port = process.env.PORT || 3000;
 
 const app = express();
 app.set('view engine', 'hbs');
@@ -85,6 +86,6 @@ app.post('/register', async (req, res, next) => {
 	res.redirect('/');
 });
 
-app.listen(3000, () => {
-	console.log('3000 hello');
+app.listen(port, () => {
+	console.log(port + ' hello');
 });
