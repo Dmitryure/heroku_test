@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 require('dotenv').config();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 const app = express();
 app.set('view engine', 'hbs');
